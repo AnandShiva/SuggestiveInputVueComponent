@@ -38,6 +38,7 @@ ul {
   z-index: 10;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .suggestiveInput {
   position: relative;
   width: fit-content;
@@ -79,9 +80,9 @@ export default {
   computed: {
     matchingSuggestionItems: function() {
       this.showPopUp = true;
-      let currentInput = this.currentUserInput;
+      let currentInput = this.currentUserInput.toLowerCase();
       let suggestedItems = this.$props.suggestionProps.filter(items => {
-        return items.indexOf(currentInput) != -1;
+        return items.toLowerCase().indexOf(currentInput) != -1;
       });
       return suggestedItems;
     },
