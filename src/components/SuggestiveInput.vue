@@ -95,7 +95,7 @@ export default {
     highLightMatchingSection(currentUserInput, suggestedItem){
       let matchingSectionIndex =-1;
       if(currentUserInput != ""){
-        matchingSectionIndex = suggestedItem.indexOf(currentUserInput);
+        matchingSectionIndex = suggestedItem.toLowerCase().indexOf(currentUserInput.toLowerCase());
       }
       if(matchingSectionIndex == -1){
         return suggestedItem;
@@ -103,7 +103,7 @@ export default {
       let highlightedHtmlString = "";
       highlightedHtmlString = suggestedItem.substring(0,matchingSectionIndex);
       highlightedHtmlString += "<b>";
-      highlightedHtmlString += currentUserInput + "</b>";
+      highlightedHtmlString += suggestedItem.substring(matchingSectionIndex,matchingSectionIndex+currentUserInput.length) + "</b>";
       highlightedHtmlString += suggestedItem.substring(matchingSectionIndex+currentUserInput.length);
       return highlightedHtmlString;
       

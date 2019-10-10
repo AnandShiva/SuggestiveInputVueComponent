@@ -19,15 +19,16 @@ export default {
   data(){
     return {
       suggestionInp : [
-        "abc",
-        "def",
-        "ghi",
-        "fjk",
-        "lmo",
-        "pqr",
-        "stu",
-        "vwx",
-        "yz"
+         "Products",
+        "Electronics",
+        "Unnecessaryly loooonnggggg textttttttttttttt",
+        "short text",
+        "Special Characters & ",	
+        "12345678910111213",
+        "Television",
+        "VueJS",
+        "Component Sharing", 
+				"Zebra-Crossing"
       ]
     };
   }
